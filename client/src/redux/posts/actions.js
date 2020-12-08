@@ -63,14 +63,6 @@ export const addComment = (postId, body) => async (dispatch) => {
         isCommented: res.data.isCommented,
       },
     });
-    // dispatch({
-    //   type: UPDATE_COMMENT,
-    //   payload: {
-    //     postId,
-    //     comments: res.data.comments,
-    //     isCommented: res.data.isCommented,
-    //   },
-    // });
   } catch (err) {
     if (!err.response) return;
     const error = err.response.data.errors[0].message;
